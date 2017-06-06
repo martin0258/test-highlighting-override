@@ -1,9 +1,17 @@
-<?php
-/**
- * Root directory of Drupal installation.
- */
-define('DRUPAL_ROOT', getcwd());
-require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
-drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
-menu_execute_active_handler();
-later_change();
+// LINQPad's "Dump" extension method will eat just about anything!
+
+123.Dump();
+Regex.Match ("my favorite color is...", "colou?r").Dump();
+
+//  Dump accepts an optional title for formatting:
+
+TimeZoneInfo.Local.Dump ("Bet you never knew this type existed!");
+
+// Dump returns exactly what it was given, so you can sneakily inject
+// a Dump (or even many Dumps) *within* an expression. This is useful
+// for monitoring a query as it progresses:
+
+new[] { 11, 5, 17, 7, 13 }	.Dump ("Prime numbers")
+.Where (n => n > 10)		.Dump ("Prime numbers > 10")
+.OrderBy (n => n)			.Dump ("Prime numbers > 10 sorted")
+.Select (n => n * 10) 		.Dump ("Prime numbers > 10 sorted, times 10!");
